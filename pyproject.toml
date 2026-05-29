@@ -8,11 +8,9 @@ version = "0.1.0"
 description = "LeWM latent world model on alanine dipeptide — toy stage"
 requires-python = ">=3.10"
 
-# Dependencies are intentionally left empty.
-# The Spark agent owns this section — it will populate dependencies
-# based on its architecture and tooling choices, and must account for
-# the aarch64/ARM64 environment (some wheels require the NVIDIA package
-# index or building from source).
+# Dependencies are left empty — populate based on architecture and tooling choices.
+# Account for the aarch64/ARM64 environment: some wheels require the NVIDIA package
+# index or building from source.
 dependencies = []
 
 [tool.setuptools.packages.find]

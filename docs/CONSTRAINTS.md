@@ -1,6 +1,6 @@
 # CONSTRAINTS.md — The Contract
 
-This document states what is **fixed** and what is **free**. It is the binding contract between the docs layer (this scaffold) and the implementation layer (the Spark agent).
+This document states what is **fixed** and what is **free**. It is the contract the implementation must satisfy.
 
 ---
 
@@ -45,7 +45,7 @@ Those belong to a later phase of the project. Their presence here is out of scop
 
 ---
 
-## Free — the agent owns these
+## Free — the implementation owns these
 
 The following decisions are explicitly yours. Do not wait for guidance on them; make the calls and document your choices in the logged config.
 
@@ -66,4 +66,4 @@ The following decisions are explicitly yours. Do not wait for guidance on them; 
 - **Hardware:** NVIDIA DGX Spark, GB10 Grace–Blackwell, **aarch64/ARM64**, unified memory, CUDA.
   - Some Python wheels are absent from PyPI for aarch64. Use the NVIDIA package index or build from source as needed. This is a known environment quirk, not an error.
 - **Scale:** Data fits in memory. Single GPU. A passing run completes in **minutes**, not hours. A run trending toward many hours at toy scale indicates a problem — investigate before continuing.
-- **Data source:** Alanine dipeptide trajectory from `mdshare`. The agent decides preprocessing and splits.
+- **Data source:** Alanine dipeptide trajectory from `mdshare`. The implementation decides preprocessing and splits.
